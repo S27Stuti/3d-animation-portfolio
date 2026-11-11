@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07090e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Stuti Shah | Creative 3D Designer, Blender Artist, and UI/UX Developer. Explore photorealistic 3D environments, vehicles, props, and digital experiences.">
+
+  <title>Stuti | 3D Animation & Design Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient Glow Background Gradients -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Interactive Desktop Cursor Follower -->
+  <div class="cursor-spotlight" aria-hidden="true"></div>
+
+  <!-- ================= SITE HEADER / NAVBAR ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Stuti Portfolio Home">
+        <span class="logo-symbol">{Stuti!}</span>
+        <span class="status-badge" id="db-status-badge" title="Database connection status">
+          <span class="pulse-dot"></span> SQLite Syncing...
+        </span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#pipeline" class="nav-link">Pipeline</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-hire">
+          <span>Let's Talk</span>
+          <span>&rarr;</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (iOS / Android) -->
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <i>✦</i> Available for 3D Freelance & Studio Projects
+        </div>
+
+        <h1 class="hero-title">
+          Crafting Immersive <br>
+          <span class="gradient-text">3D Realities & Animations</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Creative 3D Designer & Blender Artist specializing in architectural visualization,
+          vehicle aerodynamics, character modeling, and modern interactive digital experiences.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-primary">
+            <span>Explore 3D Work</span>
+            <span>&darr;</span>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>Commission a Project</span>
+          </a>
+        </div>
+
+        <!-- Dynamic Stats Bar -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Showcase Assets</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Cycles</span>
+            <span class="stat-label">& Eevee Render</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Custom Topology</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">SQLite</span>
+            <span class="stat-label">Live DB Synced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SHOWCASE SECTION ================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curated Portfolio</span>
+          <h2 class="section-title">Featured 3D Projects</h2>
+          <p class="section-description">
+            Browse through production-ready environments, detailed hard-surface vehicles, and organic sculpts.
+            Powered dynamically by the backend SQLite database.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab">All Assets</button>
+          <button class="filter-btn" data-filter="environment" role="tab">Environments</button>
+          <button class="filter-btn" data-filter="vehicle" role="tab">Vehicles</button>
+          <button class="filter-btn" data-filter="organic" role="tab">Organic Modeling</button>
+          <button class="filter-btn" data-filter="props" role="tab">Hard Surface Props</button>
+        </div>
+
+        <!-- Dynamic Projects Grid (Populated via SQLite API) -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Cards injected dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3D WORKFLOW PIPELINE ================= -->
+    <section class="pipeline-section" id="pipeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Methodology</span>
+          <h2 class="section-title">Creative 3D Pipeline</h2>
+          <p class="section-description">
+            From initial thumbnail sketch to final raytraced render and web integration.
+          </p>
+        </div>
+
+        <div class="pipeline-grid">
+          <div class="pipeline-step">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Concept & Blockout</h3>
+            <p class="step-desc">Analyzing silhouettes, camera focal length, and geometric scale using primitive blockouts.</p>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Precision Modeling</h3>
+            <p class="step-desc">Crafting clean SubD topology, bevel profiles, and edge-loops tailored for deformation and rendering.</p>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="step-num">03</div>
+            <h3 class="step-title">UV & PBR Shading</h3>
+            <p class="step-desc">Optimized non-overlapping UV unwrap with realistic procedural roughness, metallic, and normal maps.</p>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Lighting & Cycles</h3>
+            <p class="step-desc">Three-point studio illumination, HDRI skies, volumetrics, and multi-pass color grading.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT & SKILLS SECTION ================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-bio">
+            <span class="section-tag">The Designer</span>
+            <h2 class="section-title">Hi, I'm Stuti Shah.</h2>
+            <p>
+              I am a passionate 3D artist, UI/UX designer, and frontend developer dedicated to
+              transforming creative concepts into tangible, high-fidelity visual experiences.
+            </p>
+            <p>
+              With extensive hands-on experience in <strong>Blender</strong> for 3D modeling, texturing,
+              studio lighting, and keyframe animation, I combine artistic vision with technical precision.
+              Complementing my 3D expertise, I design user-centric interfaces in <strong>Figma</strong> and develop
+              responsive web interfaces using <strong>HTML, CSS, JavaScript, and the MERN stack</strong>.
+            </p>
+            <p>
+              Whether crafting photorealistic architectural spaces, stylized vehicle concepts, or interactive
+              WebGL web journeys, I aim to create work that captivates and performs seamlessly across mobile, tablet, and desktop screens.
+            </p>
+          </div>
+
+          <!-- Skills Matrix -->
+          <div class="skills-wrapper">
+            <div class="skill-category-card">
+              <h3 class="skill-category-title">🎨 3D Modeling & Animation</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">Blender 4.x</span>
+                <span class="skill-pill">Subdivision Modeling</span>
+                <span class="skill-pill">Hard-Surface Modeling</span>
+                <span class="skill-pill">Cycles Path Tracing</span>
+                <span class="skill-pill">Eevee Real-Time</span>
+                <span class="skill-pill">PBR Material Shading</span>
+                <span class="skill-pill">Lighting & HDRI</span>
+                <span class="skill-pill">Camera Animation</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <h3 class="skill-category-title">💻 Web & Interactive Design</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">Three.js / WebGL</span>
+                <span class="skill-pill">Figma UI/UX</span>
+                <span class="skill-pill">HTML5 & CSS3</span>
+                <span class="skill-pill">JavaScript (ES6+)</span>
+                <span class="skill-pill">Responsive Design</span>
+                <span class="skill-pill">Node.js & Express</span>
+                <span class="skill-pill">SQLite / MongoDB</span>
+                <span class="skill-pill">MERN Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT & COMMISSION SECTION ================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Start a Project</h2>
+          <p class="section-description">
+            Have an exciting 3D concept, animation project, or design role?
+            Send an inquiry below — submissions are instantly saved to the database.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Contact Info -->
+          <div class="contact-info-card">
+            <div class="info-header">
+              <h3>Direct Channels</h3>
+              <p>Feel free to reach out directly via WhatsApp, email, or telephone.</p>
+            </div>
+
+            <div class="contact-channels">
+              <!-- WhatsApp Quick Action -->
+              <a href="https://wa.me/917041694260?text=Hello%20Stuti!%20I%20saw%20your%203D%20Animation%20Portfolio%20and%20would%20love%20to%20discuss%20a%20project." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="channel-item whatsapp"
+                 title="Open WhatsApp Chat">
+                <div class="channel-icon">💬</div>
+                <div class="channel-details">
+                  <div class="channel-title">WhatsApp Instant Chat</div>
+                  <div class="channel-value">+91 7041694260</div>
+                </div>
+                <span>&rarr;</span>
+              </a>
+
+              <!-- Direct Email -->
+              <div class="channel-item">
+                <div class="channel-icon">✉️</div>
+                <div class="channel-details">
+                  <div class="channel-title">Email Address</div>
+                  <a href="mailto:stutu2004shah@gmail.com" class="channel-value" style="color:var(--text-primary); text-decoration:none;">
+                    stutu2004shah@gmail.com
+                  </a>
+                </div>
+                <button class="btn-copy-email" id="btn-copy-email" title="Copy email address" aria-label="Copy Email">
+                  📋
+                </button>
+              </div>
+
+              <!-- Direct Phone -->
+              <a href="tel:7041694260" class="channel-item">
+                <div class="channel-icon">📞</div>
+                <div class="channel-details">
+                  <div class="channel-title">Phone Call</div>
+                  <div class="channel-value">+91 7041694260</div>
+                </div>
+                <span>&rarr;</span>
+              </a>
+            </div>
+
+            <div style="padding-top: 10px; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
+              ⏱ Typical response time: Within 24 hours.<br>
+              📍 Open to remote worldwide & on-site opportunities.
+            </div>
+          </div>
+
+          <!-- Interactive Commission Form (Connected to Backend Database) -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Maya Lin" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address *</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="maya@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-service" class="form-label">Project Type</label>
+                  <select id="form-service" name="service" class="form-select">
+                    <option value="3D Architectural Visualization">3D Architectural Visualization</option>
+                    <option value="Vehicle & Hard Surface Modeling">Vehicle & Hard Surface Modeling</option>
+                    <option value="3D Animation & Motion">3D Animation & Motion</option>
+                    <option value="Organic & Character Sculpting">Organic & Character Sculpting</option>
+                    <option value="UI/UX & Web Development">UI/UX & Web Development</option>
+                    <option value="Full-Time / Freelance Hire">Full-Time / Freelance Hire</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-budget" class="form-label">Estimated Budget</label>
+                  <select id="form-budget" name="budget" class="form-select">
+                    <option value="Flexible / Discussion">Flexible / Discussion</option>
+                    <option value="Under $500">Under $500</option>
+                    <option value="$500 - $1,500">$500 - $1,500</option>
+                    <option value="$1,500 - $5,000">$1,500 - $5,000</option>
+                    <option value="$5,000+">$5,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Project Details & Requirements *</label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Describe your 3D vision, timeline, reference files, or deliverables..." required></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn-submit">
+                <span>Send 3D Project Inquiry</span>
+                <span>&rarr;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PROJECT DETAIL LIGHTBOX / MODAL ================= -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project modal">&times;</button>
+      <div class="modal-content">
+        <div class="modal-image-wrapper">
+          <img src="" alt="" id="modal-img" class="modal-image">
+        </div>
+
+        <span class="card-category" id="modal-category">Environment</span>
+        <h2 class="card-title" id="modal-title" style="font-size: 1.8rem; margin: 8px 0 12px;">Project Title</h2>
+        <p class="card-tagline" id="modal-desc" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7;"></p>
+
+        <!-- Technical Specs -->
+        <div class="modal-specs-grid">
+          <div class="spec-item">
+            <span class="spec-title">Polygon Topology</span>
+            <span class="spec-val" id="modal-poly">142k Faces</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-title">Render Engine</span>
+            <span class="spec-val" id="modal-engine">Blender Cycles</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-title">Shading & Lighting</span>
+            <span class="spec-val">PBR Workflow</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;">Software & Tools Used</h4>
+          <div id="modal-tools" class="skill-pills"></div>
+        </div>
+
+        <div style="margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="#contact" class="btn-primary" onclick="document.getElementById('project-modal').classList.remove('open')">
+            <span>Commission Similar Model</span> &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN / INQUIRIES VIEWER MODAL ================= -->
+  <div class="modal-overlay" id="admin-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 950px;">
+      <button class="modal-close-btn" id="admin-close-btn" aria-label="Close inquiries modal">&times;</button>
+      <div class="modal-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem;">Database Inquiries Log</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Direct view of client messages received in SQLite (portfolio.db)</p>
+          </div>
+          <button onclick="openAdminModal()" class="ctrl-btn" style="padding: 6px 12px;">↻ Refresh</button>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="inquiries-table">
+            <thead>
+              <tr>
+                <th>Sender</th>
+                <th>Service Needed</th>
+                <th>Budget</th>
+                <th>Message</th>
+                <th>Received</th>
+              </tr>
+            </thead>
+            <tbody id="admin-inquiries-body">
+              <!-- Dynamically populated from /api/messages -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-symbol">{Stuti!}</span>
+          <p class="footer-tagline">3D Artist • Blender Animator • UI/UX Developer</p>
+        </div>
+
+        <div class="footer-actions">
+          <button class="btn-admin-preview" onclick="openAdminModal()" title="View database messages table">
+            ⚙️ View Database Inquiries
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Made with <span class="heart-icon">❤</span> by Stuti Shah</p>
+        <p>© 2026 Stuti | 3D Animation & Design Portfolio • All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Controller -->
+  <script src="app.js"></script>
+</body>
+</html>
